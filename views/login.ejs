@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 50%;
+        animation: fadeIn 0.5s ease-in-out;
+        height: 50%;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    .imp {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-style: bold;
+        font-size: 20px;
+    }
+
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .lain {
+        width: 50%;
+        min-height: 1px;
+        color: black;
+        background-color: black;
+        margin: auto;
+    }
+
+    /* Apply a fade-in animation to the form */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<body>
+    <div class="login-container">
+        <h2>Chat Hub. A simple, fun & creative way to capture</h2>
+        <form action="/user/login" method="post" style="height: 50%; margin: auto;" id="loginForm">
+            <% if(message){%>
+                <h3 style="color: red;" id="message">
+                    <%=message%>
+                </h3>
+                <% } %>
+                    <label for="Email">Email:</label>
+                    <input type="email" name="email" id="loginInput" class="imp" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="imp" required>
+
+                    <input type="submit" value="Login" class="btn">
+        </form>
+
+        <div class="lain"></div>
+        <div class="signup">
+            <p> Let us get to know you better! Add a profile picture and some basic information to make your experience
+                more enjoyable. <a href="/user/insert">Sign Up</a></p>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

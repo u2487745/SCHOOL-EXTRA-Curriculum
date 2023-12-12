@@ -1,0 +1,86 @@
+<!-- fake-payment.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #e0d8e7;
+    }
+
+    #fake-payment-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    #qr-code {
+      max-width: 300px;
+      margin: 20px auto;
+    }
+
+    #payment-message {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #4CAF50; /* Green color for success */
+    }
+
+    #payment-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50; /* Green color for button */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    #payment-button:hover {
+      background-color: #45a049; /* Darker green color on hover */
+    }
+    img{
+        width: 70%;
+        height: 70%;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="fake-payment-container">
+    <h1>Pay Now</h1>
+    <div id="payment-message"></div>
+    <div id="qr-code">
+      <!-- You can generate a fake QR code or use a placeholder image -->
+      <img src="./images/istockphoto-1347277582-612x612.jpg" alt="Fake QR Code">
+    </div>
+    <button id="payment-button" onclick="simulatePayment()">Click to Pay Now</button>
+  </div>
+
+  <script>
+    function simulatePayment() {
+      // Simulate a successful payment
+      document.getElementById('payment-message').innerText = 'Payment Successful!';
+      alert('Payment successful');
+      console.log("Redirecting to /payment");
+      window.location.href = '/';
+    }
+  </script>
+</body>
+</html>

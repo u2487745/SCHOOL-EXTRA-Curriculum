@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Activities</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wiki-container">
+
+        <header>
+          <div class="wrapper school-info">
+            <img id="school-logo" src="http://glebe.harrow.dbprimary.com/service/util/me?o=316477938&size=xLargeLogo">
+            <h1>Globe Primary School</h1>
+          </div>
+          <%- include('./partials/header.ejs'); -%>
+        </header>
+
+        <div class="" style="background-color: white;padding:10px">
+             <h5>EXTRACURRICULAR ACTIVITIES: LIFE OUTSIDE THE CLASSROOM</h5>
+             <div class="row" style="padding:20px">
+                <div class="col-md-8">
+                   <div class="image-boxvw"><img src="image.jpg" alt="image" style="width:100%;height:100%"></div>
+                   <h5>EXTRACURRICULAR ACTIVITIES HELP HIGH SCHOOL STUDENTS PREPARE FOR COLLEGE AND BEYOND.
+                </h5>
+                <hr>
+                <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, ullam quidem tempora sunt consequatur dolorem nostrum beatae accusantium culpa temporibus corrupti at voluptates veritatis quaerat debitis consequuntur minus quis labore aliquid exercitationem explicabo, hic doloribus voluptatem! Tempore labore iusto officia eveniet, sit vitae aliquam veritatis culpa nesciunt accusamus ratione velit minus rem debitis suscipit. Temporibus architecto iure iusto odio eveniet assumenda nesciunt laboriosam corporis eum provident eius nobis vel amet animi, perspiciatis beatae, dolor dolores iste sit sint ut quas. Rerum aspernatur soluta nostrum fugiat aperiam et harum dignissimos alias architecto modi voluptatibus accusamus molestiae cumque mollitia, velit animi dolorem, quidem accusantium quo obcaecati, porro laborum. Quis dolorum porro nesciunt quam aut molestias quisquam natus maxime possimus cupiditate totam alias, nemo ut? Quas mollitia voluptate optio animi, molestiae blanditiis quod error adipisci modi aliquid corrupti ipsa aperiam voluptas consequatur vel quisquam necessitatibus asperiores distinctio sunt nesciunt? Tenetur quasi veritatis repudiandae.</p>
+                <p style="text-align: justify;margin-top:20px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolorum dolores corrupti non porro nemo, excepturi quos rem commodi atque temporibus iusto. Blanditiis doloremque molestias similique, excepturi deserunt magnam ab quas necessitatibus ipsa architecto laboriosam voluptatum, aperiam animi eligendi delectus. A non debitis quis consequuntur ducimus, alias quo perferendis cupiditate iusto, quam eaque! Voluptatum nobis dignissimos facere iusto itaque quo animi praesentium deserunt, harum, sapiente fuga accusamus veniam quod, velit illo labore sunt cupiditate minima quam est. Nam iste enim omnis ipsa necessitatibus et voluptas qui explicabo! Cumque corrupti illo dolores enim unde, excepturi ab dolor numquam ipsam iure repellendus?</p>
+                </div>
+
+                <div class="col-md-4" style="padding:20px">
+                    <h5>Student News</h5>
+                    <ul>
+                        <li>What is Your Learning Style?</li>
+                        <li>CTE: For Life After High School</li>
+                        <li>What It Is, and What It Isn’t: The Gap Year</li>
+                    </ul>
+                </div>
+             </div>
+        </div>
+
+    </div>
+      
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+    function toggleActivityDetails(activity) {
+        const details = activity.querySelector('.activity-details');
+        details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up TalkHub</title>
+    <!-- <link rel="stylesheet" href="./css/inser-user.css"> -->
+    <link rel="icon" type="image/x-icon" href="./image/logo-removebg-preview.png" style="border-radius: 300px;">
+</head>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  
+    height: 100vh;
+}
+
+.h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form {
+    margin: auto;
+    margin-top: 20vh;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submitBtn[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Apply a fade-in animation to the form */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    animation: fadeIn 1.5s ease-in-out;
+}
+</style>
+<body>
+        <form class="form" action="/user/insert" method="post" onsubmit="reloadPage()">
+            <h1 class="h1">
+                TalkHub
+            </h1>
+            <h4 class="h1">
+                Sign up to chat and meet your friends.
+            </h4>
+                    <label class="label" for="username">Name:</label>
+                    <input class="input" type="text" id="username" name="name" required>
+
+                    <label class="label" for="email">Email:</label>
+                    <input class="input" type="email" id="email" name="email" required>
+
+                    <label class="label" for="number">Number:</label>
+                    <input class="input" type="number" id="number" name="number" required>
+
+                    <label class="label" for="password">Password:</label>
+                    <input class="input" type="password" id="password" name="password" required>
+
+                    <% if(message){%>
+                    <p style="color: red; font-style: oblique;"><%=message%></p>
+                    <%}%>
+                    <button  class="submitBtn" type="submit">submit</button>
+        </form>
+</body>
+<script>
+    function reloadPage() {
+        let messageElement = document.getElementById("message");
+        if (messageElement && messageElement.innerText.trim() !== "") {
+            setTimeout(() => {
+                console.log("err");
+                window.location.reload();
+            }, 1000);
+        }
+    }
+</script>

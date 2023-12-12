@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>School Activities</title>
+</head>
+
+<body>
+  <div class="wiki-container">
+
+    <header>
+      <div class="wrapper school-info">
+        <img id="school-logo" src="http://glebe.harrow.dbprimary.com/service/util/me?o=316477938&size=xLargeLogo">
+        <h1>Globe Primary School</h1>
+      </div>
+      <%- include('./partials/header.ejs'); -%>
+    </header>
+
+
+
+    <div class="top-page content">
+
+      <div class="main-section slideshow">
+        <div class="schl-img"><img src="image.jpg" alt="image" style="width:100%;height:100%"></div>
+      </div>
+
+      <div class="main-section quick-links quick-links-outer">
+        <div class="quick-links-inner">
+          <h2>School extra circulium activities</h2>
+          <div class="marquee-container">
+            <div class="marquee">
+              <ul style="list-style: none;padding-left:0">
+                <% if (data) { %>
+                  <% data.map((e) => { %>
+                    <li class="item">
+                      <a href="/book">
+                        <h3><%= e.name %></h3>
+                        <p><%= e.des %></p>
+                      </a>
+                    </li>
+                  <% }); %>
+                <% } else { %>
+                  <li class="item">
+                    <a href="book">
+                      <h3>Clubs</h3>
+                      <p>See our list of clubs</p>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="book">
+                      <h3>Music Tuition</h3>
+                      <p>Find out about Music Tuition</p>
+                    </a>
+                  </li>
+                  <!-- Add other default items as needed -->
+                <% } %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="wiki-area content">
+
+      <div class="home-content">
+        <h3>School Extra Circulium Activities</h3>
+
+        <div>
+          <iframe width="600" height="315" src="https://www.youtube.com/embed/gdPqiGb1pf0?si=eExU-p-NdTpM0Ku1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <h4 style="margin-top:20px">Highlights: Student Engagement Activities</h4>
+        </div>
+
+        <div>
+          <iframe width="600" height="315" src="https://www.youtube.com/embed/yiKeLOKc1tw?si=Q_HURD_dT9mI3xYW"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <h4 style="margin-top:20px">Online Privacy for Kids - Internet Safety and Security for Kids</h4>
+        </div>
+      </div>
+
+      <div class="home-sidebar">
+        <ul>
+          <li>
+            <h3>Upcoming Events & Assemblies</h3>
+            <p>See what's happening in our School Calendar</p>
+          </li>
+          <li>
+            <h3>School Status</h3>
+            <p>The School is open as usual. Click here for more information</p>
+          </li>
+          <li>
+            <h3>School Direct (ITT/UCAS)</h3>
+            <p>Become a Harrow Teacher by September 2017</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+
+  <script>
+    function toggleActivityDetails(activity) {
+      const details = activity.querySelector('.activity-details');
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+
+
+  </script>
+
+
+
+</body>
+</html>

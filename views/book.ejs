@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Activities</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wiki-container">
+
+    <header>
+      <div class="wrapper school-info">
+        <img id="school-logo" src="http://glebe.harrow.dbprimary.com/service/util/me?o=316477938&size=xLargeLogo">
+        <h1>Globe Primary School</h1>
+      </div>
+      <%- include('./partials/header.ejs'); -%>
+    </header>
+
+
+    <form action="/book" style="margin-top:20px;background-color: white;padding:10px" method="post" >
+      <div style="margin-top:10px">
+        <label for="" class="form-label">First Name</label><br>
+        <input type="text" class="form-input" name="Fname" required>
+      </div>
+      <div style="margin-top:10px">
+        <label for="" class="form-label">Last Name</label><br>
+        <input type="text" class="form-input" name="Lname" required>
+      </div>
+      <div style="margin-top:10px">
+        <label for="" class="form-label">Email Address</label><br>
+        <input type="email" class="form-input" name="email" required>
+      </div>
+      <div style="margin-top:10px">
+        <label for="" class="form-label">Phone Number</label><br>
+        <input type="tel" class="form-input" name="number" required>
+      </div>
+
+      <div style="margin-top:10px">
+        <label for="" class="form-label">select City</label><br>
+        <select name="city" id="" class="form-input" required>
+          <option value="London">London</option>
+          <option value="Paris">Paris</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value=" New York City"> New York City</option>
+          <option value="San Francisco">San Francisco</option>
+          <option value="Barcelona">Barcelona</option>
+        </select>
+      </div>
+
+      <div style="margin-top:10px">
+        <label for="" class="form-label">What is your class?</label><br>
+
+        <select name="class" id="" class="form-input" required>
+          <option value="class 1st">class 1st</option>
+          <option value="class 2nd">class 2nd</option>
+          <option value="class 3rd">class 3rd</option>
+          <option value="class 4th">class 4th</option>
+          <option value="class 5th">class 5th</option>
+          <option value="class 6th">class 6th</option>
+          <option value="class 7th">class 7th</option>
+          <option value="class 8th">class 8th</option>
+          <option value="class 9th">class 9th</option>
+          <option value="class 10th">class 10th</option>
+          <option value="class 11th">class 11th</option>
+          <option value="class 12th">class 12th</option>
+        </select>
+
+        <div style="display:flex">
+          <div style="display:flex">
+            <input type="checkbox" value="Virtual/Online Schooling" name="schooling" required>
+            <p>Virtual/Online Schooling</p>
+          </div>
+
+          <div style="display:flex">
+            <input type="checkbox" value="Teacher Involvement" name="teacherInvolvement" >
+            <p>Teacher Involvement</p>
+          </div>
+        </div>
+
+        <div>
+          <label for="" class="form-label">Add a personal note</label><br>
+          <textarea name="note" id="" cols="5" rows="2" class="form-input"></textarea>
+        </div>
+
+        <div><button onclick="btn">Book Now</button></div>
+      </div>
+    </form>
+
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+
+  <script>
+    function btn() {
+      alert("Booking successfully");
+      console.log("Redirecting to /payment");
+    }
+  </script>
+
+
+
+</body>
+
+</html>

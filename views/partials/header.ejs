@@ -1,0 +1,17 @@
+<nav>
+    <ul>
+      <li><a href="/" style="text-decoration: none;color:black">Home</a></li>
+      <li><a href="activities" style="text-decoration: none;color:black">School Info</a></li>
+
+      <li><a href="gallery" style="text-decoration: none;color:black">Gallery</a></li>
+     <% if(name){ %>
+        <li><%=name%></li>
+        <li style="float: right;"> <form action="/user/logout" method="POST">
+            <button style="background-color: rgb(242, 242, 246); border-radius: 10px; border: 1px solid forestgreen;" type="submit" class="btnLog">Log Out</button>
+        </form></li>
+     <%}else{%>
+       <li><a href="/user/login">Login</a></li>
+      <li><a href="/user/insert">Signup</a></li>
+      <% }%>
+    </ul>
+  </nav>

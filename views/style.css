@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    box-sizing: border-box;
+}
+p, ul {
+    
+    font-size: 10pt;
+    margin: 10px 0 10px 0;
+    font-weight: normal;
+    line-height: 1.5;
+}
+body {
+   font-family: 'Poppins', sans-serif;
+    background: #4b92dc;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.wiki-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.wiki-container {
+    background: url("http://glebe.harrow.dbprimary.com/harrow/primary/glebe/web/bespoke-theme-images/glebe_header-compressed.png") top right no-repeat;
+    height: 216px;
+}
+.wiki-container .school-info {
+    padding: 25px;
+}
+.wiki-container .school-info > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.wiki-container .school-info #school-logo {
+    margin-right: 20px;
+}
+.wiki-container .school-info h1 {
+    color: #000;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.wiki-container nav {
+    background: linear-gradient(#fedb3e, #fed20f);
+}
+.wiki-container ul h3 {
+    font-family: 'Schoolbell', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    color: #0197d4;
+}
+.wiki-container nav li {
+    display: inline-block;
+    padding: 15px;
+}
+.wiki-container .top-page.content, .wiki-container .wiki-area.content {
+    margin-top: 20px;
+    display: flex;
+}
+.wiki-container .top-page.content .slideshow {
+    flex: 1 1 70%;
+    padding-right: 25px;
+}
+.wiki-container .top-page.content .quick-links {
+    flex: 1 1 30%;
+}
+.top-page.content .quick-links.quick-links-outer {
+    background: #2783b2;
+    border: 1px solid #fed930;
+}
+.quick-links-inner {
+    padding: 20px;
+}
+.quick-links-inner h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.quick-links .item {
+    background: linear-gradient(#fedb3e, #fed20f);
+    padding: 10px;
+}
+.quick-links-inner li.item {
+    background: linear-gradient(#fedb3e, #fed20f);
+    padding: 12px;
+    margin-bottom: 10px;
+}
+.wiki-container .wiki-area.content {
+    background: #fff;
+    padding: 15px;
+    font-family: 'Schoolbell', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+.wiki-area.content .home-content {
+    flex: 1 1 70%;
+    margin-right: 25px;
+}
+.wiki-area.content h2 {
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #0197d4;
+}
+.wiki-area.content h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #0197d4;
+}
+.wiki-area.content .home-content ul.checklist li {
+    background: url("http://glebe.harrow.dbprimary.com/harrow/primary/glebe/web/bespoke-theme-images/checked.png") no-repeat;
+    padding: 0 0 0 25px;
+}
+.wiki-area.content .home-sidebar h3 {
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #000;
+}
+.wiki-area.content .home-sidebar {
+    flex: 1 1 30%;
+}
+.wiki-area.content .home-sidebar ul li {
+    margin-bottom: 30px;
+}
+
+.schl-img{
+   width:100%;
+   max-width:700px;
+   height:500px;
+}
+
+   .entity, .relationship {
+           position: absolute;
+           padding: 10px;
+           background-color: #fff;
+           border: 1px solid #333;
+           border-radius: 5px;
+           cursor: pointer;
+           transition: transform 0.3s ease;
+       }
+
+       .relationship {
+           width: 2px;
+           height: 100px;
+           background-color: #333;
+           transition: background-color 0.3s ease;
+       }
+
+       .entity:hover, .relationship:hover {
+           transform: scale(1.1);
+       }
+
+       .relationship:hover {
+           background-color: #555;
+       }
+
+       .marquee-container {
+           height: 330px; /* Adjust the height as needed */
+           overflow: hidden;
+         }
+     
+         .marquee {
+           display: flex;
+           flex-direction: column;
+           animation: marqueeAnimation 20s linear infinite;
+         }
+     
+         @keyframes marqueeAnimation {
+           0% {
+             transform: translateY(0);
+           }
+           100% {
+             transform: translateY(-100%);
+           }
+         }
+
+
+         .custom-model-main {
+           display: none;
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           
+           height: 100%;
+           justify-content: center;
+           align-items: center;
+           background: rgba(0, 0, 0, 0.5);
+           z-index: 999;
+         }
+     
+         .custom-model-inner {
+           background: #fff;
+           padding: 20px;
+           border-radius: 5px;
+           position: relative;
+           width:100%;
+           max-width:600px;
+         }
+     
+         .close-btn {
+           position: absolute;
+           top: 10px;
+           right: 10px;
+           cursor: pointer;
+         }
+     
+         .bg-overlay {
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: rgba(0, 0, 0, 0.5);
+           display: none;
+         }
+
+         .form-label{
+           font-size:15px;
+           font-weight:500
+         }
+         .form-input{
+           width:100%;
+           border:solid 1px rgb(185, 185, 185);
+           padding:6px;
+           border-radius: 5px;
+         }
+
+         .row {
+           --bs-gutter-x: 1.5rem;
+           --bs-gutter-y: 0;
+           display: flex;
+           flex-wrap: wrap;
+           margin-top: calc(-1 * var(--bs-gutter-y));
+           margin-right: calc(-.5 * var(--bs-gutter-x));
+           margin-left: calc(-.5 * var(--bs-gutter-x));
+           width:100%;
+       }
+
+       .col-md-8{
+           width:60%
+       }
+       .col-md-4{
+           width:40%
+       }
+.image-boxvw{
+   width:100%;
+   height:400px
+}
+       @media only screen and (max-width:767.99px){
+           .col{
+               width:100%
+           }
+       }
